@@ -9,6 +9,7 @@ bool hamiltonian_path_helper(vector<vector<int>>& G, vector<bool>& visited_dots,
     if (count == n) {
         return true;
     }
+    
     for (int neighbor : G[cur]) {
         if (!visited_dots[neighbor]) {
             path_cycle.push_back(neighbor);

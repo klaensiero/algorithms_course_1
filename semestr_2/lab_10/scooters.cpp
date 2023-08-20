@@ -41,11 +41,13 @@ int main() {
         g[u].push_back(v);
         rg[v].push_back(u);
     }
+
     for (int i = 1; i <= n; i++) {
         if (!visited_dots[i])
             dfs_topsort(i);
         
     }
+
     memset(visited_dots, false, sizeof(visited_dots));
     int count = 0;
     for (int i = n - 1; i >= 0; i--) {
@@ -55,6 +57,7 @@ int main() {
             dfs_comp(u, count);
         }
     }
+
     while (q--) {
         int a, b;
         cin >> a >> b;
@@ -62,6 +65,7 @@ int main() {
             cout << "YES\n";
             continue;
         }
+
         int u = -1, v = -1;
         for (int c = 1; c <= count; c++) {
             bool has_vert1 = false, has_vert2 = false;
@@ -73,6 +77,7 @@ int main() {
                     has_vert2 = true;
                 
             }
+            
             if (has_vert1 && has_vert2) {
                 u = c;
                 break;

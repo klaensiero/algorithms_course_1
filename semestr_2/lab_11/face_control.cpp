@@ -9,6 +9,7 @@ struct EDGE {
 };
 
 bool Ford_Bellman(int n, int m, const vector<EDGE>& edges, int k) {
+
     vector<int> dist_list(n + 1, INT_MAX);
     dist_list[1] = 0;
     bool visited;
@@ -26,6 +27,7 @@ bool Ford_Bellman(int n, int m, const vector<EDGE>& edges, int k) {
         if (!visited)
             break;
     }
+    
     for (int j = 0; j < m; j++) {
         int u = edges[j].u;
         int v = edges[j].v;

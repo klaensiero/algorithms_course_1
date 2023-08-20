@@ -11,13 +11,13 @@ int comp[MN];
 void dfs_func(int u) {
     comp[u] = cc;
     for (int v : graph[u]) {
-        if (comp[v] == 0) {
+        if (comp[v] == 0)
             dfs_func(v);
-        }
+        
     }
 }
 
-void run() {
+int main() {
     int count_components = 1;
     cin >> n >> m;
     for (int i = 0; i < m; i++) {
@@ -43,25 +43,24 @@ void run() {
     int cnt_components = cc;
     vector<bool> component_traps(cnt_components + 1, false);
     for (int i = 1; i <= n; i++) {
-        if (traps[i]) {
+        if (traps[i])
             component_traps[comp[i]] = true;
-        }
+        
     }
+
     int cnt_traps = count(component_traps.begin() + 1, component_traps.end(), true);
     cout << cnt_components << "\n";
-    for (int i = 1; i <= n; i++) {
+
+    for (int i = 1; i <= n; i++)
         cout << comp[i] << " ";
-    }
+    
     cout << "\n";
-    for (int i = 1; i <= cnt_components; i++) {
+
+    for (int i = 1; i <= cnt_components; i++)
         cout << component_traps[i] << " ";
-    }
+    
     cout << "\n";
 
-    cout << "\n";
 
-}
-int main() {
-    run();
     return 0;
 }

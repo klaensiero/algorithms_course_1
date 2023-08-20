@@ -6,7 +6,7 @@ using namespace std;
 long limit = 1e9;
 
 int main() {
-    int n, m;
+    int n, m, s, dest;
     long count;
     
     cin >> n >> m;
@@ -17,7 +17,8 @@ int main() {
         neighbours[u].push_back(v);
         neighbours[v].push_back(u);
     }
-    int s, dest;
+
+    
     cin >> s >> dest;
     vector<int> graph(n + 1, limit);
     queue<int> q;

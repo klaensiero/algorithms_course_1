@@ -5,7 +5,7 @@
 
 using namespace std;
 
-const int infinity = INT_MAX;
+const int infinity = 1e9;
 
 struct EDGES {
     int to_vertex;
