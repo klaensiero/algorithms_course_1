@@ -6,6 +6,7 @@ using namespace std;
 long limit = 1e9;
 
 int main() {
+
     int n, m, s, dest;
     long count;
     

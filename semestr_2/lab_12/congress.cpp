@@ -51,7 +51,7 @@ int main() {
     sort(EDGES.begin(), EDGES.end());
 
     int S1 = kruskal_func(-1, n, EDGES);
-    long S2 = 1e10;
+    long S2 = 1e9;
 
     for (int i = 0; i < m; i++) {
         int S = kruskal_func(i, n, EDGES);
@@ -62,5 +62,6 @@ int main() {
     }
 
     cout << S1 << " " << S2 << "\n";
+
     return 0;
 }

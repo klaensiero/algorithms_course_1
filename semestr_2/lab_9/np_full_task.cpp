@@ -80,5 +80,6 @@ int main() {
 
     string res = hamiltonian_path(G);
     cout << res << "\n";
+
     return 0;
 }

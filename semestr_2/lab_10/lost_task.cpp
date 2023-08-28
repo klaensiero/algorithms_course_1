@@ -11,6 +11,7 @@ void dfs_func(int u, vector<vector<short>>& neighbours, vector<bool>& visited_do
             dfs_func(v, neighbours, visited_dots, vertex_order);
         
     }
+
     vertex_order.push_back(u);
 }
 
@@ -23,6 +24,7 @@ int main() {
     vector<bool> visited_dots(n, false);
     vector<int> vertex_order;
     vector<vector<short>> neighbours(n);
+
     for (int i = 0; i < m; i++) {
         int u, v;
         cin >> u >> v;
@@ -35,6 +37,7 @@ int main() {
             dfs_func(u, neighbours, visited_dots, vertex_order);
         
     }
+    
     reverse(vertex_order.begin(), vertex_order.end());
 
     for (int i = 0; i < n; i++)

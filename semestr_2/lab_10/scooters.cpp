@@ -14,6 +14,7 @@ void dfs_topsort(int u) {
             dfs_topsort(v);
         }
     }
+
     top_sorted.push_back(u);
 }
 

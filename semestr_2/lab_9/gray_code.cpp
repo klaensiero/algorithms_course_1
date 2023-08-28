@@ -7,6 +7,7 @@ void func(int n) {
 }
 
 int main() { 
+
     int n, i, j;
     cin >> n;
 
@@ -28,6 +29,6 @@ int main() {
 
     for (i = 0 ; i < mes.size() ; i++) 
         cout << mes[i] << "\n";
-    return 0; 
-
+    
+    return 0;
 }

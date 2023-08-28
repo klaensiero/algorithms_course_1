@@ -21,17 +21,22 @@ bool dfs_func(int u, int par) {
     return false;
 }
 
-void run () {
+
+int main() {
+
     bool check_cycle = 0;
-    long count = 1;
+    int count = 1;
     int n, m;
+
     cin >> n >> m;
+
     for (int i = 0; i < m; i++) {
         int u, v;
         cin >> u >> v;
         edge_func(u, v);
         edge_func(v, u);
     }
+
     bool check = false;
     for (int i = 1; i <= n; i++) {
         if (!visited_vertex[i]) {
@@ -41,10 +46,11 @@ void run () {
             }
         }
     }
-    if (check) cout << "YES" << "\n";
-    else cout << "NO" << "\n";
-}
-int main() {   
-    run ();
+
+    if (check)
+        cout << "YES" << "\n";
+    else
+        cout << "NO" << "\n";
+
     return 0;
 }

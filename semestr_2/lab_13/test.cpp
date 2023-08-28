@@ -11,10 +11,12 @@ int hash_func(int GROUP) {
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
+    
     int M, Q;
     cin >> M >> Q;
 
     vector<vector<pair<int, int>>> GROUPS(100000);
+
     while (Q--) {
         char op;
         int GROUP, ISU, POINTS;
