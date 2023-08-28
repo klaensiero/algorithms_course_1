@@ -3,6 +3,7 @@ def cast_spell(w):
     res = ' '.join(str(i) for i in lengths)
     return res
 
+
 def suffix_func(w):
     suffixes = [0] * len(w)
     lengths = [0] * len(w)
@@ -18,5 +19,6 @@ def suffix_func(w):
         lengths[i] = suffixes[i]
 
     return lengths
+
 
 print(cast_spell(input()))

@@ -5,21 +5,22 @@ using namespace std;
 
 long limit = 1e9;
 
-int main() {
+int main()
+{
 
     int n, m, s, dest;
     long count;
-    
+
     cin >> n >> m;
     vector<vector<int>> neighbours(n + 1);
-    for (int i = 0; i < m; i++) {
+    for (int i = 0; i < m; i++)
+    {
         int u, v;
         cin >> u >> v;
         neighbours[u].push_back(v);
         neighbours[v].push_back(u);
     }
 
-    
     cin >> s >> dest;
     vector<int> graph(n + 1, limit);
     queue<int> q;
@@ -27,11 +28,14 @@ int main() {
     graph[s] = 0;
     q.push(s);
 
-    while (!q.empty()) {
+    while (!q.empty())
+    {
         int u = q.front();
         q.pop();
-        for (int v : neighbours[u]) {
-            if (graph[v] == limit) {
+        for (int v : neighbours[u])
+        {
+            if (graph[v] == limit)
+            {
                 graph[v] = graph[u] + 1;
                 q.push(v);
             }
@@ -40,7 +44,7 @@ int main() {
 
     if (graph[dest] == limit)
         cout << "-1\n";
-    else 
+    else
         cout << graph[dest] << "\n";
 
     return 0;

@@ -1,5 +1,6 @@
 import sys
 
+
 def func_count_repeated(n, txt_song, questions):
     count = 0
     for q in questions:
@@ -8,7 +9,7 @@ def func_count_repeated(n, txt_song, questions):
         w2 = txt_song[j-1:j-1+k]
         if (w1 == w2):
             count += 1
-    
+
     return count
 
 

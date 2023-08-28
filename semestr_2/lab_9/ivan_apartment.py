@@ -7,6 +7,7 @@ def dfs_func(i, j):
     dfs_func(i, j+1)
     dfs_func(i, j-1)
 
+
 n, m = map(int, input().split())
 rooms = 0
 house = [[0]*m for i in range(n)]

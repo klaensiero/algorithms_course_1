@@ -8,6 +8,7 @@ def count_func(T, X):
 
     return k, indices
 
+
 T = input()
 X = input()
 res = list(count_func(T, X))

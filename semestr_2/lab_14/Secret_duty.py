@@ -1,6 +1,7 @@
 import re
 import sys
 
+
 def check_txt(txt):
     name = r'([A-Z][a-z]*\s){3}'
     age = r'\d\d\s'
@@ -12,6 +13,7 @@ def check_txt(txt):
         return 'YES'
     else:
         return 'NO'
+
 
 input = open(0).readline
 n = int(input())

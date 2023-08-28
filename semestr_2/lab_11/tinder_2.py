@@ -20,7 +20,6 @@ class DSU:
         self.p[v] = self.get(self.p[v])
         return self.p[v]
 
-
     def check_scc(self, v, u):
         v = self.get(v)
         u = self.get(u)
@@ -45,7 +44,7 @@ def read_G():
         else:
             queries.append((1, v - 1, u - 1))
             G.pop((min(v, u) - 1, max(v, u) - 1), None)
-            
+
     for p in G:
         union_d.add(p[0], p[1])
     return union_d, queries
